@@ -3,16 +3,16 @@
  * Global utilities.
  *
  */
-(function($, Drupal) {
-
-  'use strict';
-
+(function init($, Drupal) {
   Drupal.behaviors.bs_sass = {
-    attach: function(context, settings) {
-
+    attach(context, settings) {
       // Custom code here
+      const hello = "world";
 
-    }
+      const myFunc = () => {
+        console.log("my FUNC");
+      };
+      myFunc();
+    },
   };
-
 })(jQuery, Drupal);

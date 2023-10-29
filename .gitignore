@@ -23,6 +23,7 @@
 
 /web/modules
 /web/themes/contrib
+/web/themes/custom/*/node_modules/
 
 # Ignore drupal core (if not versioning drupal sources)
 /web/vendor

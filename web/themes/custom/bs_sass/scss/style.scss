@@ -1,4 +1,4 @@
-/* 
+/*
 Theme Name: Bootstrap 4 Sass
 Description: Bootstrap 4 with Sass
 */
@@ -7,15 +7,15 @@ Description: Bootstrap 4 with Sass
 @import "import";
 
 /* GENERAL STYLES
--------------------------------------------------*/
+------------------------------------------------- */
 
 body {
     background: $white;
 }
 
 
-/* COLORS 
---------------------------------------------------*/
+/* COLORS
+-------------------------------------------------- */
 
 a {
     color: $accent-shade;
@@ -29,32 +29,53 @@ a {
     background: $accent-shade !important;
 }
 
-.menu--main li a {
-    color: $primary-shade;
+.menuMain li a {
+  color: $primary-shade;
 }
 
 .menu--account li a {
-    color: $primary-shade;
+  color: $primary-shade;
 }
 
 .site-name-slogan a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card-group img {
-    margin: 0;
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  margin: 0;
 }
 
 .card-group .field--type-image {
-    margin: 0
+  margin: 0
 }
 
 .slick {
-    width: 100%;
+  width: 100%;
 }
 
 .slick>div {
-    margin: 0 15px;
+  margin: 0 15px;
+}
+
+.no-styles {}
+
+body {
+  position: relative;
+  z-index: 200;
+  display: flex;
+  width: 40px;
+  height: 20px;
+  margin: 10px;
+  color: #e3;
+  background-color: red;
+}
+
+#id-custom {
+  color: red;
+}
+
+.CustomClass {
+  position: relative
 }
