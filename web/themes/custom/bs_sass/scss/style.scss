@@ -10,7 +10,7 @@ Description: Bootstrap 4 with Sass
 ------------------------------------------------- */
 
 body {
-    background: $white;
+  background: $white;
 }
 
 
@@ -18,22 +18,22 @@ body {
 -------------------------------------------------- */
 
 a {
-    color: $accent-shade;
+  color: $accent-shade;
 }
 
 .bg-inverse {
-    background: $primary-shade !important;
+  background: $primary-shade !important;
 }
 
 .site-footer {
-    background: $accent-shade !important;
+  background: $accent-shade !important;
 }
 
-.menuMain li a {
+.menu-main li a {
   color: $primary-shade;
 }
 
-.menu--account li a {
+.menu-account li a {
   color: $primary-shade;
 }
 
@@ -47,7 +47,7 @@ a {
   margin: 0;
 }
 
-.card-group .field--type-image {
+.card-group .field-type-image {
   margin: 0
 }
 
@@ -59,7 +59,9 @@ a {
   margin: 0 15px;
 }
 
-.no-styles {}
+.no-styles {
+
+}
 
 body {
   position: relative;
@@ -68,7 +70,7 @@ body {
   width: 40px;
   height: 20px;
   margin: 10px;
-  color: #e3;
+  color: #ee3;
   background-color: red;
 }
 
@@ -76,6 +78,6 @@ body {
   color: red;
 }
 
-.CustomClass {
+.custom-class {
   position: relative
 }

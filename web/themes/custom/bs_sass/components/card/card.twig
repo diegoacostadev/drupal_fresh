@@ -1,0 +1,16 @@
+{# We compute if the URL is external in twig, so we can avoid passing a #}
+{# parameter **every** time we use this component #}
+{% if link_url matches '^/[^/]' %}
+  {% set external = false %}
+{% else %}
+  {% set external = true %}
+{% endif %}
+
+<div class="card" style="width: 18rem;">
+  {{ image }}
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <p class="card-text">{{ body }}</p>
+    <a href="{{ link_url }}" class="btn btn-primary" {{ external ? 'target="_blank" rel="noreferrer noopener"'}}>{{ link_title }}</a>
+  </div>
+</div>

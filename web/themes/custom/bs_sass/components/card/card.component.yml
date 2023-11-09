@@ -1,0 +1,35 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Card
+status: stable
+description: This component produces a card component with image, title, description and link.
+libraryDependencies:
+  - core/once
+props:
+  type: object
+  properties:
+    # attributes:
+    #   type: Drupal\Core\Template\Attribute
+    #   title: Attributes
+    image:
+      type: Drupal\media\Entity
+      title: image
+    title:
+      type: string
+      title: Title
+      examples:
+        - Basic Card
+    body:
+      type: string
+      title: Body
+      examples:
+        - Lorem ipsum amet dolor at.
+    link_url:
+      type: string
+      title: Link URL
+      examples:
+        - https://example.org
+    link_title:
+      type: string
+      title: Link Title
+      examples:
+        - Read more!
