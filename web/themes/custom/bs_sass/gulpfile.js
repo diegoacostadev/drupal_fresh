@@ -9,6 +9,7 @@ const autoprefixer = require("autoprefixer");
 const postcssInlineSvg = require("postcss-inline-svg");
 const browserSync = require("browser-sync").create();
 const pxtorem = require("postcss-pxtorem");
+const sassGlob = require("gulp-sass-glob");
 
 const postcssProcessors = [
   postcssInlineSvg({
@@ -54,7 +55,7 @@ function scssComp() {
     .pipe(
       sass({
         includePaths: [
-          // "./node_modules/bootstrap/scss",
+          "./scss",
           // "../../contrib/bootstrap_barrio/scss",
         ],
       }).on("error", sass.logError),
@@ -92,6 +93,7 @@ function styles() {
   return gulp
     .src([paths.scss.bootstrap, paths.scss.src])
     .pipe(sourcemaps.init())
+    .pipe(sassGlob())
     .pipe(
       sass({
         includePaths: [
@@ -141,11 +143,9 @@ function serve() {
   });
 
   gulp
-    .watch(
-      [paths.scss.watch, paths.scssComp.watch, paths.scss.bootstrap],
-      scssComp,
-    )
+    .watch([paths.scss.watch, paths.scss.bootstrap], styles)
     .on("change", browserSync.reload);
+  gulp.watch([paths.scssComp.watch], scssComp).on("change", browserSync.reload);
 }
 
 const build = gulp.series(styles, scssComp, gulp.parallel(js, serve));

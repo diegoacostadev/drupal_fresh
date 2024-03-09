@@ -4,13 +4,15 @@ Description: Bootstrap 4 with Sass
 */
 
 // import files
+
+@import "../components/**/_variables.scss";
 @import "import";
 
 /* GENERAL STYLES
 ------------------------------------------------- */
 
 body {
-  background: $white;
+  background: $body-bg;
 }
 
 
