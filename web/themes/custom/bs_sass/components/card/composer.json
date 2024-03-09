@@ -1,0 +1,14 @@
+{
+    "name": "vendor_name/card",
+    "description": "description",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "diego",
+            "email": "email@example.com"
+        }
+    ],
+    "require": {
+    }
+}

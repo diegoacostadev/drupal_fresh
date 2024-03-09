@@ -4,6 +4,7 @@
 // 2. Include any default variable overrides here
 // variables
 @import "variables";
+
 // typography
 @import "typography";
 
@@ -56,6 +57,7 @@
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
-@import "mixins";
+// @import "mixins";
+
 // barrio
 @import "barrio";

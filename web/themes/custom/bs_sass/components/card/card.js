@@ -1,7 +1,11 @@
 (function ($, Drupal) {
   Drupal.behaviors.behaviorName = {
-    attach: function (context, settings) {
+    attach(context, settings) {
       console.log(context);
-    }
+      const hello = "wolrd";
+      const saras = "muchop";
+
+      console.log(hello);
+    },
   };
-}(jQuery, Drupal));
+})(jQuery, Drupal);

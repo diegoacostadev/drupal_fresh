@@ -65,3 +65,6 @@
 /drush
 /drupal.phar
 /drupal
+
+.DS_Store
+.idea

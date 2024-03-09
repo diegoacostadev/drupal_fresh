@@ -3,16 +3,15 @@
  * Global utilities.
  *
  */
-(function init($, Drupal) {
-  Drupal.behaviors.bs_sass = {
+(function ($, Drupal) {
+  Drupal.behaviors.bcdevs = {
     attach(context, settings) {
-      // Custom code here
-      const hello = "world";
-
-      const myFunc = () => {
-        console.log("my FUNC");
+      const sarasa = function Nadas() {
+        console.log("nada");
       };
-      myFunc();
+
+      const varriable = `sarasa ajsdhajksdhkashd ajskdhkjahsdkjashdkasdhaskhdjdaksjdh ka`;
+      // Custom code here
     },
   };
 })(jQuery, Drupal);

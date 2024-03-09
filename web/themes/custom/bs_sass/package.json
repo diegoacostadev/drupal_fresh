@@ -4,6 +4,8 @@
   "description": "Barrio SASS implementation",
   "main": "index.js",
   "scripts": {
+    "lint:css": "stylelint \"**/*.scss\"",
+    "lint:js": "npx eslint \"**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -39,6 +41,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "merge-stream": "^1.0.1",
+    "postcss": "8",
     "postcss-inline-svg": "^4.1.0",
     "postcss-pxtorem": "^5.1.1",
     "sass": "^1.45.0",

@@ -11,25 +11,34 @@ props:
     #   type: Drupal\Core\Template\Attribute
     #   title: Attributes
     image:
-      type: Drupal\media\Entity
+      type: string
       title: image
     title:
       type: string
       title: Title
       examples:
         - Basic Card
-    body:
+    cta_text:
+      title: CTA Text
       type: string
-      title: Body
       examples:
-        - Lorem ipsum amet dolor at.
-    link_url:
+        - Click me!
+    cta_href:
+      title: CTA Href
       type: string
-      title: Link URL
       examples:
-        - https://example.org
-    link_title:
+        - 'https://www.example.org'
+    cta_target:
+      title: CTA Target
       type: string
-      title: Link Title
-      examples:
-        - Read more!
+      enum:
+        - ''
+        - _blank
+
+slots:
+  card_body:
+    title: Body
+    description: The contents of the card.
+    examples:
+      - <p>Foo is <strong>NOT</strong> bar.</p>
+
