@@ -24,7 +24,7 @@
         "drupal/devel": "^5.0",
         "drupal/paragraphs": "^1.16",
         "drupal/twig_tweak": "^3.2",
-        "drush/drush": "^12.4"
+        "drush/drush": "^12.4.3"
     },
     "conflict": {
         "drupal/drupal": "*"

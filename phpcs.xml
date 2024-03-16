@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<ruleset name="Project coding standards">
+
+  <!-- Combine these rulesets. -->
+  <rule ref="Drupal"/>
+  <rule ref="DrupalPractice"/>
+
+  <!-- If no paths are specified check these ones. -->
+  <file>./web/themes/custom</file>
+  <arg name="extensions" value="inc,install,md,module,php,profile,test,txt,theme,yml"/>
+  <arg name="colors"/>
+  <arg name="report-width" value="auto"/>
+
+  <!-- Ignore any files in these paths. -->
+  <exclude-pattern>*/.git/*</exclude-pattern>
+  <exclude-pattern>*/config/*</exclude-pattern>
+  <exclude-pattern>*/css/*</exclude-pattern>
+  <exclude-pattern>*/js/*</exclude-pattern>
+  <exclude-pattern>*/icons/*</exclude-pattern>
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>*rules_export.txt</exclude-pattern>
+
+  <!--Exclude third party code.-->
+  <exclude-pattern>*/libraries/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>*/source/*</exclude-pattern>
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/README.md</exclude-pattern>
+  <exclude-pattern>*/default.settings.*</exclude-pattern>
+  <exclude-pattern>*/default.services.*</exclude-pattern>
+  <exclude-pattern>*/settings.*.php</exclude-pattern>
+  <exclude-pattern>*/web/update.php</exclude-pattern>
+  <exclude-pattern>*/web/index.php</exclude-pattern>
+  <exclude-pattern>*/web/autoload.php</exclude-pattern>
+  <exclude-pattern>*/themes/*/CHANGELOG.md</exclude-pattern>
+
+
+  <!-- For colored cli output -->
+  <arg name="colors"/>
+  <!-- To show rule names. Equivalent to "phpcs -s" -->
+  <arg value="sp"/>
+
+</ruleset>

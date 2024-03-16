@@ -5,8 +5,17 @@ Description: Bootstrap 4 with Sass
 
 // import files
 
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+// variables
+// Theme variables
+@import "variables";
+// components variables override
 @import "../components/**/_variables.scss";
 @import "import";
+
 
 /* GENERAL STYLES
 ------------------------------------------------- */

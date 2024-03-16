@@ -39,6 +39,7 @@ const paths = {
   scssComp: {
     src: "./components/**/*.scss",
     watch: "./components/**/*.scss",
+    watch_vars: "./components/**/_variables.scss",
   },
   js: {
     bootstrap: "./node_modules/bootstrap/dist/js/bootstrap.min.js",
@@ -91,7 +92,7 @@ function scssComp() {
 // Compile sass into CSS & auto-inject into browsers
 function styles() {
   return gulp
-    .src([paths.scss.bootstrap, paths.scss.src])
+    .src([paths.scss.bootstrap, paths.scss.src, paths.scssComp.src])
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(
@@ -143,7 +144,10 @@ function serve() {
   });
 
   gulp
-    .watch([paths.scss.watch, paths.scss.bootstrap], styles)
+    .watch(
+      [paths.scss.watch, paths.scssComp.watch_vars, paths.scss.bootstrap],
+      styles,
+    )
     .on("change", browserSync.reload);
   gulp.watch([paths.scssComp.watch], scssComp).on("change", browserSync.reload);
 }
