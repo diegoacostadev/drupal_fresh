@@ -21,7 +21,7 @@
 /web/sites/*/tmp
 /web/sites/*/cache
 
-/web/modules
+/web/modules/contrib
 /web/themes/contrib
 /web/themes/custom/*/node_modules/
 
