@@ -1,0 +1,22 @@
+uuid: 26487ebb-f155-4096-92f6-bab153fb26e2
+langcode: es
+status: true
+dependencies:
+  theme:
+    - bs_sass
+_core:
+  default_config_hash: l01OI_mIdGNSoCk9e4t-4jZsFWkMBm2JDR-lC2Xgn8s
+id: bs_sass_primary_local_tasks
+theme: bs_sass
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas principales'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

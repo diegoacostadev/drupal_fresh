@@ -1,0 +1,22 @@
+uuid: 90eef7c5-de44-4e3f-8090-18c74896c736
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bs_sass
+_core:
+  default_config_hash: hwYXmOoL84DZ3uG52iDAboUwk_qxY-3kU-ZpW-4V6ZE
+id: bs_sass_help
+theme: bs_sass
+region: highlighted
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

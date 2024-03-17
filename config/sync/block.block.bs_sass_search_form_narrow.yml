@@ -1,0 +1,23 @@
+uuid: 6baf0898-68e5-4b76-94b8-1a99a5420e3f
+langcode: es
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bs_sass
+_core:
+  default_config_hash: sgxETv-swn0tKwwc03YbhkfjSt1xx3OndymFNdthsAs
+id: bs_sass_search_form_narrow
+theme: bs_sass
+region: sidebar_first
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulario de búsqueda (estrecho)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

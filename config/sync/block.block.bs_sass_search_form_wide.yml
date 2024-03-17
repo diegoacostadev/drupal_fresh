@@ -1,0 +1,23 @@
+uuid: bf34e9f0-92df-4cfd-a504-137c02eb84f4
+langcode: es
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bs_sass
+_core:
+  default_config_hash: h80X9732l_HzSO5TRXB5G0rPW_tXgqNmQ7iGUM1Qor0
+id: bs_sass_search_form_wide
+theme: bs_sass
+region: top_header_form
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulario de búsqueda (ancho)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

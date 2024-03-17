@@ -1,0 +1,20 @@
+uuid: 7355974b-701d-40a3-866c-7501e1e01a52
+langcode: es
+status: true
+dependencies:
+  theme:
+    - bs_sass
+_core:
+  default_config_hash: 9yDhKpVr2LetvQ5-keN6jrIAXpVCLFuRTP2Lvoweq3Y
+id: bs_sass_page_title
+theme: bs_sass
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: '0'
+  provider: core
+visibility: {  }

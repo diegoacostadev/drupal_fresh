@@ -1,0 +1,22 @@
+uuid: 60dbbcf3-9100-4d9f-9c4b-a3153e375667
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bs_sass
+_core:
+  default_config_hash: 1NJWhlViXMeIntGUeUaPUIsDy5CXXAUX4D1bVVeVIBw
+id: bs_sass_powered
+theme: bs_sass
+region: footer_fifth
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Funciona con Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

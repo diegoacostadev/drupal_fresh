@@ -1,0 +1,27 @@
+uuid: 9d6b08e9-0080-4e6c-a7e4-b1d74dfa9b79
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bs_sass
+_core:
+  default_config_hash: hhbJlALnB9Y8jBt96-IL4sYNAZ0Zv9K6KlW5t_RhJrk
+id: bs_sass_main_menu
+theme: bs_sass
+region: primary_menu
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navegación principal'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

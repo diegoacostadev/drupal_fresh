@@ -1,0 +1,20 @@
+uuid: a365dc47-3481-4960-a991-d095f250f925
+langcode: es
+status: true
+dependencies:
+  theme:
+    - bs_sass
+_core:
+  default_config_hash: 4DAV49OPko-jysRVVWYetvgwdJp78UHaU5ejfDKrg4E
+id: bs_sass_primary_admin_actions
+theme: bs_sass
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

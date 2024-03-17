@@ -1,0 +1,22 @@
+uuid: 6f1e01d8-4b00-4d0d-8056-7a32d98afcec
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bs_sass
+_core:
+  default_config_hash: H8nQBPNH4Zr-z-qA-Yg5M6170bTAUJl1CedjCWWMB1g
+id: bs_sass_messages
+theme: bs_sass
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  label_display: '0'
+  provider: system
+visibility: {  }

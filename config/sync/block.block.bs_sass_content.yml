@@ -1,0 +1,22 @@
+uuid: cd3c8b2a-a959-437e-9d2e-699f9dcbe98c
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bs_sass
+_core:
+  default_config_hash: s8NY9zpXCaseaOVggX5nzNlVoAyt95x3QXBokkqojN0
+id: bs_sass_content
+theme: bs_sass
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: af73cd40-80a9-4679-9a95-4c872526b652
+langcode: es
+status: true
+dependencies:
+  theme:
+    - bs_sass
+_core:
+  default_config_hash: PJa-thqb2uEet_pS8BQukJKtluxc8ZA7NBkqoUHrH4w
+id: bs_sass_secondary_local_tasks
+theme: bs_sass
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas secundarias'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }
