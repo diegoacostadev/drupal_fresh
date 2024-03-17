@@ -6,7 +6,7 @@
  */
 
 /**
- *
+ * Schema for module table databases.
  */
 function rsvplist_schema() {
   // Create a database table called 'rsvplist' with the following columns:
@@ -59,7 +59,7 @@ function rsvplist_schema() {
   // Create a database table name 'rvsplist_enabled' with the following fields:
   // 1) nid[int].
   $schema['rsvplist_enabled'] = [
-    'description'  => 'Tracks whether RSVP is enabled or not for a node.',
+    'description' => 'Tracks whether RSVP is enabled or not for a node.',
     'fields' => [
       'nid' => [
         'description' => 'The {node}.uid that has RSVPList enabled.',

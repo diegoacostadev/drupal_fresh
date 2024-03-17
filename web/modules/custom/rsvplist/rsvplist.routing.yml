@@ -1,7 +1,7 @@
-rsvplist.form_demo:
-  path: '/rsvplist-demo'
+rsvplist.admin_settings:
+  path: '/admin/config/content/rsvplist'
   defaults:
-    _form: '\Drupal\rsvplist\Form\RSVPForm'
+    _form: '\Drupal\rsvplist\Form\RSVPSettingsForm'
     _title: 'RSV to this Event (demo)'
   requirements:
-    _permission: 'access content'
+    _permission: 'administer rsvplist'
