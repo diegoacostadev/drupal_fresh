@@ -1,17 +1,12 @@
 <?php
 
-/*
- * @file
- * Contains the settings for administering the RSVP Form.
- */
-
 namespace Drupal\rsvplist\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- *
+ * RSVP settings forms.
  */
 class RSVPSettingsForm extends ConfigFormBase {
 
@@ -50,7 +45,7 @@ class RSVPSettingsForm extends ConfigFormBase {
   }
 
   /**
-   * {@inheritdoc }
+   * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $selected_allowed_types = array_filter($form_state->getValue('rsvplist_types'));

@@ -1,4 +1,5 @@
 const gulp = require("gulp");
+const through = require("through2");
 const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 const $ = require("gulp-load-plugins")();
@@ -49,18 +50,22 @@ const paths = {
   },
 };
 
+const pipeFunction = () => {
+  return through.obj((file, enc, cb) => {
+    return cb(null, file);
+  });
+};
+
 function scssComp() {
   return gulp
     .src(paths.scssComp.src, { base: "./" })
     .pipe(sourcemaps.init())
     .pipe(
       sass({
-        includePaths: [
-          "./scss",
-          // "../../contrib/bootstrap_barrio/scss",
-        ],
+        includePaths: ["./node_modules/bootstrap/scss", "./scss"],
       }).on("error", sass.logError),
     )
+    .pipe(pipeFunction())
     .pipe($.postcss(postcssProcessors))
     .pipe(
       postcss([
@@ -83,16 +88,12 @@ function scssComp() {
     .pipe(gulp.dest("."))
     .pipe(cleanCss())
     .pipe(browserSync.stream());
-  // return gulp
-  //   .src(paths.scssComp.src, { base: "./" })
-  //   .pipe(sass())
-  //   .pipe(gulp.dest("."));
 }
 
 // Compile sass into CSS & auto-inject into browsers
 function styles() {
   return gulp
-    .src([paths.scss.bootstrap, paths.scss.src, paths.scssComp.src])
+    .src([paths.scss.bootstrap, paths.scss.src])
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(
@@ -145,14 +146,21 @@ function serve() {
 
   gulp
     .watch(
-      [paths.scss.watch, paths.scssComp.watch_vars, paths.scss.bootstrap],
+      [
+        paths.scss.watch,
+        paths.scssComp.watch_vars,
+        paths.scssComp.watch,
+        paths.scss.bootstrap,
+      ],
       styles,
     )
     .on("change", browserSync.reload);
-  gulp.watch([paths.scssComp.watch], scssComp).on("change", browserSync.reload);
+  gulp
+    .watch([paths.scss.watch, paths.scssComp.watch], scssComp)
+    .on("change", browserSync.reload);
 }
 
-const build = gulp.series(styles, scssComp, gulp.parallel(js, serve));
+const build = gulp.series(styles, gulp.parallel(js, serve));
 
 exports.styles = styles;
 exports.js = js;

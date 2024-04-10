@@ -20,7 +20,8 @@
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^5.3.0",
     "bootstrap-icons": "^1.11.0",
-    "eslint-config-drupal": "^5.0.2"
+    "eslint-config-drupal": "^5.0.2",
+    "through2": "^4.0.2"
   },
   "devDependencies": {
     "browser-sync": "^2.24.7",

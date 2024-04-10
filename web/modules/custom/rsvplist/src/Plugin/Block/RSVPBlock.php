@@ -8,6 +8,7 @@ use Drupal\Core\Form\FormBuilderInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\rsvplist\EnablerService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -34,10 +35,18 @@ class RSVPBlock extends BlockBase implements ContainerFactoryPluginInterface {
    */
   protected $formBuilder;
 
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, FormBuilderInterface $formBuilder, RouteMatchInterface $routeMatch) {
+  /**
+   * RSVP Enabler Service.
+   *
+   * @var \Drupal\rsvplist\EnablerService
+   */
+  protected $enablerService;
+
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, FormBuilderInterface $formBuilder, RouteMatchInterface $routeMatch, EnablerService $enablerService) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->formBuilder = $formBuilder;
     $this->routeMatch = $routeMatch;
+    $this->enablerService = $enablerService;
   }
 
   /**
@@ -50,6 +59,7 @@ class RSVPBlock extends BlockBase implements ContainerFactoryPluginInterface {
       $plugin_definition,
       $container->get('form_builder'),
       $container->get('current_route_match'),
+      $container->get('rsvplist.enabler'),
     );
   }
 
@@ -57,10 +67,6 @@ class RSVPBlock extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritDoc}
    */
   public function build() {
-    // Return [
-    //      '#type' => 'markup',
-    //      '#markup' => $this->t('My RSVP List Block.'),
-    //    ];.
     return $this->formBuilder->getForm('Drupal\rsvplist\Form\RSVPForm');
   }
 
@@ -69,8 +75,9 @@ class RSVPBlock extends BlockBase implements ContainerFactoryPluginInterface {
    */
   protected function blockAccess(AccountInterface $account) {
     $node = $this->routeMatch->getParameter('node');
+    $isEnabled = $this->enablerService->isNodeEnabled($node);
 
-    if (!is_null($node)) {
+    if (!is_null($node) && $isEnabled) {
       return AccessResult::allowedIfHasPermissions($account, ['view rsvplist']);
     }
 
